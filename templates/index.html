@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>My Tweeting Application</h1>
+    <h2><a href="{% url 'tweet:tweet_create' %}">Tweet</a></h2>
+    <h2><a href="{% url 'tweet:tweet_list' %}">view tweets</a></h2>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<h1>Post Tweets</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>{{ form.tweet.label }}</label>
+            {{ form.tweet | add_class:'form-control col-2' }}
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+{% endblock %}
+</body>
+</html>

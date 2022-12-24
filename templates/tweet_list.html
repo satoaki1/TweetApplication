@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for tweet in tweet_list %}
+<p>
+    {{ tweet.tweet }}
+    <a href="{% url 'tweet:tweet_detail' tweet.pk %}">Go to detail</a>
+</p>
+{% endfor %}
+<a href="{% url 'tweet:index' %}">Back</a>
+</body>
+</html>

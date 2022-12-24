@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{ tweet.tweet }}</p>
+<a href="{% url 'tweet:tweet_delete' tweet.pk %}">Delete</a>
+<a href="{% url 'tweet:index' %}">Back</a>
+</body>
+</html>
